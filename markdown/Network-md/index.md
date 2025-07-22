@@ -1,5 +1,9 @@
 # 网络
 
+## 模拟软件
+
+ENSP、[PNETLab](https://pnetlab.com/pages/main)
+
 192.168.10.1/24
 
 常见CIDR表示法
@@ -25,8 +29,6 @@
 |Hybrid|多个VLAN|可以选择是否带VLAN标签|适用于AP、IP电话等设备
 
 ## 交换机
-
-交换机模拟软件ENSP
 
 ```vue
 查看设备型号和版本信息、运行时间、系统时间
@@ -312,11 +314,23 @@ SW2A 通过 trunk 口连接 SW3A，承载 VLAN 10 和 VLAN 20 的数据流量
 
 ## 防火墙 
 
-## 路由器
-DDNS、DNS、DHCP、DMZ、UPNP、端口映射
+
+## 软路由
+
+[ikuai](https://www.ikuai8.com/component/download)
+
+[x-wrt](https://x-wrt.com/)
+
+[openwrt_x86_x64](https://github.com/DHDAXCW/OpenWRT_x86_x64?tab=readme-ov-file)
 
 ## 光猫
 
 超级管理员账号密码获取、桥接[参考图文](https://www.bilibili.com/opus/907251136224821285?spm_id_from=333.999.0.0)
 
-## 
+## VPN
+
+|  |  | 
+| :---- | :--- |
+| android | [ClashMeta](https://github.com/MetaCubeX/ClashMetaForAndroid) |
+| ios/mac | [shadowrocket](https://www.shadowrocket.vip/) |
+|windows、linux|[Clash](https://www.clashforwindows.net/clash-for-windows-download/)|

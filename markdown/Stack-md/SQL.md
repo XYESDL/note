@@ -54,11 +54,11 @@ SQL是结构化查询语言的缩写，用来访问和操作数据库系统。
 |:----|:---|
 |列出表|SHOW TABLES;|
 |查看表结构|DESC table_name; 或 SHOW COLUMNS FROM table_name;|
-|创建表|CREATE TABLE table_name (column1 datatype, column2 datatype, ...);|
+|创建表|CREATE TABLE table_name (column1 datatype, column2 datatype);|
 |删除表|DROP TABLE table_name;|
 |删除字段|ALTER TABLE 表名 DROP COLUMN 字段名;|
-|插入数据|INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);|
-|查询数据|SELECT column1, column2, ... FROM table_name WHERE condition;|
+|插入数据|INSERT INTO table_name (column1, column2) VALUES (value1, value2);|
+|查询数据|SELECT column1, column2 FROM table_name WHERE condition;|
 |更新数据|UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;|
 |删除数据|DELETE FROM table_name WHERE condition;|
 
@@ -87,6 +87,10 @@ REFERENCES classes (id);
 删除外键
 ALTER TABLE students
 DROP FOREIGN KEY fk_class_id;
+
+自增ID
+AUTO_INCREMENT 表示该字段会自动递增
+PRIMARY KEY 通常和自增字段一起用，保证唯一性。
 ```
 
 外键约束的名称fk_class_id可以任意，FOREIGN KEY (class_id)指定了class_id作为外键，REFERENCES classes (id)指定了这个外键将关联到classes表的id列（即classes表的主键）
@@ -162,13 +166,13 @@ SELECT COUNT(*) num FROM students GROUP BY class_id;
 
 ```vue
 INSERT(一次性添加多条记录，每组值用逗号,分隔):
-INSERT INTO <表名> (字段1, 字段2, ...) VALUES (值1, 值2, ...);
+INSERT INTO <表名> (字段1, 字段2) VALUES (值1, 值2);
 
 UPDATE：
-UPDATE <表名> SET 字段1=值1, 字段2=值2, ... WHERE ...;
+UPDATE <表名> SET 字段1=值1, 字段2=值2 WHERE;
 
 DELETE：
-DELETE FROM <表名> WHERE ...;
+DELETE FROM <表名> WHERE;
 ```
 
 ```vue
@@ -180,26 +184,26 @@ REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明'
 
 插入或更新
 
-如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就更新该记录，此时，可以使用INSERT INTO ... ON DUPLICATE KEY UPDATE ...语句：
+插入一条新记录（INSERT），但如果记录已经存在，就更新该记录，此时，可以使用INSERT INTO ... ON DUPLICATE KEY UPDATE ...语句：
 INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99) ON DUPLICATE KEY UPDATE name='小明', gender='F', score=99;
 若id=1的记录不存在，INSERT语句将插入新记录，否则，当前id=1的记录将被更新，更新的字段由UPDATE指定。
 
 插入或忽略
 
-如果我们希望插入一条新记录（INSERT），但如果记录已经存在，就啥事也不干直接忽略，此时，可以使用INSERT IGNORE INTO ...语句：
+插入一条新记录（INSERT），但如果记录已经存在，就啥事也不干直接忽略，此时，可以使用INSERT IGNORE INTO ...语句：
 INSERT IGNORE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99);
 若id=1的记录不存在，INSERT语句将插入新记录，否则，不执行任何操作。
 
 快照
 
-如果想要对一个表进行快照，即复制一份当前表的数据到一个新表，可以结合CREATE TABLE和SELECT：
+对一个表进行快照，即复制一份当前表的数据到一个新表，可以结合CREATE TABLE和SELECT：
 对class_id=1的记录进行快照，并存储为新表students_of_class1:
 CREATE TABLE students_of_class1 SELECT * FROM students WHERE class_id=1;
 新创建的表结构和SELECT使用的表结构完全一致。
 
 写入查询结果集
 
-如果查询结果集需要写入到表中，可以结合INSERT和SELECT，将SELECT语句的结果集直接插入到指定表中。
+查询结果集需要写入到表中，可以结合INSERT和SELECT，将SELECT语句的结果集直接插入到指定表中。
 创建一个统计成绩的表statistics，记录各班的平均成绩：
 CREATE TABLE statistics (
     id BIGINT NOT NULL AUTO_INCREMENT,
@@ -207,13 +211,13 @@ CREATE TABLE statistics (
     average DOUBLE NOT NULL,
     PRIMARY KEY (id)
 );
-然后，我们就可以用一条语句写入各班的平均成绩：
+用一条语句写入各班的平均成绩：
 INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM students GROUP BY class_id;
 确保INSERT语句的列和SELECT语句的列能一一对应，就可以在statistics表中直接保存查询的结果：
 
 强制使用指定索引
 
-在查询的时候，数据库系统会自动分析查询语句，并选择一个最合适的索引。但是很多时候，数据库系统的查询优化器并不一定总是能使用最优索引。如果我们知道如何选择索引，可以使用FORCE INDEX强制查询使用指定的索引。例如：
+使用FORCE INDEX强制查询使用指定的索引。
 SELECT * FROM students FORCE INDEX (idx_class_id) WHERE class_id = 1 ORDER BY id DESC;
 指定索引的前提是索引idx_class_id必须存在。
 ```

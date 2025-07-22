@@ -14,7 +14,6 @@ PasswordAuthentication yes
 
 RTMP->SRS服务器->WEBRTC网页
 
-
 #### [Jitsi Meet](https://github.com/jitsi/jitsi-meet)
 
 [教程1](https://post.smzdm.com/p/akle006k/)、[教程2](https://blog.laoda.de/archives/docker-compose-install-jitsi)
