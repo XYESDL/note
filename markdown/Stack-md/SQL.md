@@ -15,6 +15,8 @@
 
 [TablePlus](https://tableplus.com/)
 
+[phpEnv](https://www.phpenv.cn/)
+
 ## 语法
 
 终端登录
