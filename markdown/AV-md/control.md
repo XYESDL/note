@@ -1,6 +1,10 @@
 # 中控品牌及控制协议
 
+串口模块：有人、中盛科技
+
 类型：HEX(十六进制0-9、A-F)、ASCLL
+
+[shutown on lan](https://github.com/ford77/SOL)
 
 ## 品牌
 

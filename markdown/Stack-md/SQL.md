@@ -19,7 +19,7 @@
 
 ## 语法
 
-终端登录
+### 终端登录
 ```vue
 mysql -u root -p
 ```
@@ -29,7 +29,7 @@ SQL是结构化查询语言的缩写，用来访问和操作数据库系统。
 
 关系数据库通过外键可以实现一对多、多对多和一对一的关系。外键既可以通过数据库来约束，也可以不设置约束，仅依靠应用程序的逻辑来保证。
 
-库操作
+### 库操作
 
 |说明|语法|
 |:----|:---|
@@ -39,7 +39,7 @@ SQL是结构化查询语言的缩写，用来访问和操作数据库系统。
 |选择|USE test;|
 |退出|EXIT;|
 
-权限
+### 权限
 
 |说明|语法|
 |:----|:---|
@@ -50,34 +50,28 @@ SQL是结构化查询语言的缩写，用来访问和操作数据库系统。
 |查看当前用户|SELECT USER();|
 |刷新权限|FLUSH PRIVILEGES;|
 
-表操作
+### 表操作
 
 |说明|语法|
 |:----|:---|
 |列出表|SHOW TABLES;|
 |查看表结构|DESC table_name; 或 SHOW COLUMNS FROM table_name;|
-|创建表|CREATE TABLE table_name (column1 datatype, column2 datatype);|
+|创建表|CREATE TABLE table_name (column1 datatype NULL, column2 datatype NOT NULL);|
 |删除表|DROP TABLE table_name;|
-|删除字段|ALTER TABLE 表名 DROP COLUMN 字段名;|
+|删除列|ALTER TABLE 表名 DROP COLUMN 字段名;|
+|添加列|ALTER TABLE 表名 ADD column1 datatype NULL;|
+|修改列|ALTER TABLE 表名 CHANGE COLUMN 旧列名 新列名 数据类型 约束条件;|
 |插入数据|INSERT INTO table_name (column1, column2) VALUES (value1, value2);|
 |查询数据|SELECT column1, column2 FROM table_name WHERE condition;|
 |更新数据|UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;|
 |删除数据|DELETE FROM table_name WHERE condition;|
 
+### 主外键、索引 
+
 ```vue
-表新增一列birth，使用：
-ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;
-
-修改birth列，列名改为birthday，类型改为VARCHAR(20)：
-ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;
-
-删除列：
-ALTER TABLE students DROP COLUMN birthday;
+主键是关系表中记录的唯一标识。
+主键不要带有业务含义，而应该使用BIGINT自增或者GUID类型。主键也不应该允许NULL。
 ```
-
-### 主外键
-
-主键是关系表中记录的唯一标识。主键的选取非常重要：主键不要带有业务含义，而应该使用BIGINT自增或者GUID类型。主键也不应该允许NULL。
 
 ```vue
 定义外键
@@ -94,10 +88,12 @@ DROP FOREIGN KEY fk_class_id;
 AUTO_INCREMENT 表示该字段会自动递增
 PRIMARY KEY 通常和自增字段一起用，保证唯一性。
 ```
+```vue
+外键约束的名称fk_class_id可以任意
+FOREIGN KEY (class_id)指定了class_id作为外键REFERENCES classes (id)指定了这个外键将关联到classes表的id列（即classes表的主键）
 
-外键约束的名称fk_class_id可以任意，FOREIGN KEY (class_id)指定了class_id作为外键，REFERENCES classes (id)指定了这个外键将关联到classes表的id列（即classes表的主键）
-
-索引是关系数据库中对某一列或多个列的值进行预排序的数据结构。通过使用索引，可以让数据库系统不必扫描整个表，而是直接定位到符合条件的记录，这样就大大加快了查询速度。
+索引让数据库系统不必扫描整个表，而是直接定位到符合条件的记录，加快查询速度。
+```
 
 ```vue
 创建复合索引

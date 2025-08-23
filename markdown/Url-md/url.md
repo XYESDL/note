@@ -103,3 +103,7 @@ git push -u origin main    #推送
 [TRAE](https://www.trae.ai/home)
 
 [CURSOR](https://www.cursor.com/)
+
+## 论坛
+
+[科创网](https://www.kechuang.org/)

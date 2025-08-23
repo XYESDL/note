@@ -4,9 +4,11 @@
 ![接口定义](/OBD.png)
 
 ## 开发板 
-[ESP32](https://www.espressif.com.cn/zh-hans)
+[乐鑫官网](https://www.espressif.com.cn/zh-hans)
 
 ![ESP32C3-GPIO](/esp32c3.png)
+
+[ESP32C3规格书](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_cn.pdf)
 
 ## 开发工具
 [Arduino](https://www.arduino.cc/)
