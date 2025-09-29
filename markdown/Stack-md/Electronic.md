@@ -60,6 +60,8 @@ G-S二极管：加速关断并保护栅极（快恢复或肖特基型）-米勒�
 ```
 
 
+https://www.ti.com/cn/lit/ds/symlink/ucc21520.pdf?ts=1758497911272
+
 
 
 
