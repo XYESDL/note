@@ -42,6 +42,8 @@
 
 [解析正则表达式](https://ihateregex.io/)
 
+[图像处理工具](https://www.iloveimg.com/zh-cn)
+
 ## 启动盘制作工具
 
 [etcher](https://etcher.balena.io/)
