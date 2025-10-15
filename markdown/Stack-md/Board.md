@@ -4,9 +4,21 @@
 
 [乐鑫官网](https://www.espressif.com.cn/zh-hans)
 
-![ESP32C3-GPIO](/esp32c3.png)
+![ESP32-C3-GPIO](/esp32c3.png)
 
-[ESP32C3规格书](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_cn.pdf)
+[ESP32-C3规格书](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_cn.pdf)
+
+[esp32-s3-wroom-1规格书](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)
+
+[ESP 硬件设计指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32s3/index.html)
+
+[Flash下载工具](https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32s3/production_stage/tools/flash_download_tool.html)
+
+## 屏幕
+
+ST7789、2.0寸IPS、240*320、SPI通讯
+
+SPI:时钟线（SCLK）、主输出从输入线（MOSI）、主输入从输出线（MISO）、片选线（CS）
 
 ### 开发工具
 
@@ -23,6 +35,7 @@
 
 [合宙文档](https://wiki.luatos.com/chips/esp32c3/board.html)
 
+[立创开发板技术文档](https://wiki.lckfb.com/zh-hans/)
 ## STM32
 
 [STMCU官网](https://www.stmcu.com.cn/)
