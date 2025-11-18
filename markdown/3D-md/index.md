@@ -1,9 +1,12 @@
 # 3D建模
 
-## [Bambu Lab](https://bambulab.com/zh)
+## 拓竹
 
-拓竹切片软件[Bambu Studio](https://bambulab.com/zh/download/studio)
-拓竹模型网站[MakerWorld](https://makerworld.com/zh?from=bambulab.com)
+[Bambu Lab](https://bambulab.com/zh)
+
+[Bambu Studio](https://bambulab.com/zh/download/studio)
+
+[MakerWorld](https://makerworld.com/zh?from=bambulab.com)
 
 ## [Blender](https://www.blender.org/)
 
