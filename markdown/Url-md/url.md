@@ -52,38 +52,6 @@
 
 ## [GitHub](https://github.com/)
 
-GitHub Pages
-
-```vue
-new repository --> Settings--> Pages --> Build and deployment --> GitHub Actions
-```
-
-源代码管理
-
-```vue
-设置身份
-    git config --global user.name "***"
-    git config --global user.email "***"
-删除现有的 origin
-    git remote remove origin
-查看远程仓库列表
-    git remote -v
-设置系统代理
-    git config --global http.proxy http://127.0.0.1:7890
-    git config --global https.proxy http://127.0.0.1:7890
-
-git clone    #克隆
-git pull origin main --rebase  # 同步更新
-git status  #当前状态
-git init    #初始化
-git add .   #添加到缓存区
-git commit -m "feat: 初始化项目"    #提交代码
-git branch -M main    #选择分支
-git remote add origin https://github.com/user/repo.git    #连接远程仓库（首次）
-git push -u origin main    #推送
-
-```
-
 ## 效率工具
 
 [局域网文件传输 LocalSend](https://localsend.org/zh-CN)
