@@ -7,7 +7,7 @@ hero:
   text: "AIO"
   tagline: ❄❄❄❄❄❄
   image:
-    src: /bg1.png
+    src: /bg1.svg
     alt: bg
   actions:
     - theme: brand
