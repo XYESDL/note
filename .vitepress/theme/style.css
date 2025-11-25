@@ -137,3 +137,11 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Component: Home Features
+ * -------------------------------------------------------------------------- */
+
+.home-features {
+  margin-top: 60px; /* 调整这个值可以控制下移的距离 */
+}
+
