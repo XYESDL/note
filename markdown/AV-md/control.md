@@ -6,6 +6,8 @@
 
 [shutown on lan](https://github.com/ford77/SOL)
 
+[展厅相关软件](https://www.tree666.com/)
+
 ## 品牌
 
 ### [AMX](https://www.amx.com/zh)
@@ -92,7 +94,11 @@ UI设计-定义按钮事件
 
 ![2](/ws2.png)
 
+### CREATOR快捷
 
+UI--ThinkDraw--[注册地址拼接](http://thinkdraw.ty.ff255.cn/manageSystem/thinkdraw/register?)
+
+编辑软件--ThinkControl
 
 ### AVSYS
 
