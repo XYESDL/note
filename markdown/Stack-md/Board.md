@@ -1,5 +1,7 @@
 # 开发板 
 
+[wokwi模拟软件](https://wokwi.com/)
+
 ## ESP32
 
 [乐鑫官网](https://www.espressif.com.cn/zh-hans)
@@ -11,6 +13,8 @@
 [esp32-s3-wroom-1规格书](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_cn.pdf)
 
 [ESP 硬件设计指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32s3/index.html)
+
+[立创开发板文档](https://wiki.lckfb.com/zh-hans/)
 
 [Flash下载工具](https://docs.espressif.com/projects/esp-test-tools/zh_CN/latest/esp32s3/production_stage/tools/flash_download_tool.html)
 

@@ -67,3 +67,9 @@ git remote add origin https://github.com/user/repo.git    #连接远程仓库（
 git push -u origin main    #推送
 
 ```
+
+## C/C++
+
+[MinGW](https://www.mingw-w64.org/)编译
+
+gcc your_program.c -o your_program.exe -lws2_32 -mwindows

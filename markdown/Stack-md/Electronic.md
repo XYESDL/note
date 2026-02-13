@@ -48,50 +48,46 @@ G-S二极管：加速关断并保护栅极（快恢复或肖特基型）-米勒�
 
 ## CAN通讯
 
-### OBDⅡ
+开源适配器[CANable 2](https://canable.io/)
+
+[ESP32-CAN](https://github.com/collin80/ESP32RET)
+
+### 上位机软件
+[SavvyCAN](https://www.savvycan.com/)
+
+[CANgaroo](https://github.com/Schildkroet/CANgaroo)
+
+### 协议
+
+物理层CAN2 A、CAN2 B、CAN FD
+
+通讯层SLCAN、SocketCAN、GVRET
+
+## OBDⅡ
 ![接口定义](/OBD.png)
 
-### CAN三方库
-[CAN库](https://github.com/sandeepmistry/arduino-CAN)
-
-[ESP32-CAN监听固件](https://github.com/collin80/ESP32RET)
-
-### API
+### DBC库
 [OpenDBC Python API](https://github.com/commaai/opendbc)
 
-### CAN数据分析工具
-[采集分析SavvyCAN](https://www.savvycan.com/)
-
+### OBD2-PID
 [obd2-pid-table](https://www.csselectronics.com/pages/obd2-pid-table-on-board-diagnostics-j1979)
 
-[开源DBC库](https://github.com/commaai/opendbc)
-
 ### ESP32 CAN项目
-[MrDIY](https://mrdiyca.gitlab.io/mrdiy-esp-online-flasher/)
+[MrDIY](https://gitlab.com/MrDIYca/canabus)
 
 [MrDIY-store](https://store.mrdiy.ca/)
 
 [ESP32 CAN项目](https://mc.dfrobot.com.cn/thread-317271-1-1.html)
 
-[ESP32RET](https://github.com/collin80/ESP32RET)
-
 ### 配件
 
-CAN收发器芯片-SN65HVD231DR  Rx = GPIO4、Tx = GPIO5
+CAN收发器芯片-SN65HVD23X
 
 LDO（低压差线性稳压器）-AMS1117
-
-### CAN抓包
-
-- 硬件：ESP32、CAN收发器
-- 固件：ESP32RET
-- 软件：SavvyCAN
 
 ## 工具
 
 [JBC245电烙铁](https://oshwhub.com/search?wd=JBC245)
-
-## 杂项
 
 ### 手机直供电
 
