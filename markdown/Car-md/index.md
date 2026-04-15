@@ -1,5 +1,7 @@
 # 本章以Ford Focus为例
 
+![car](/car.mp4)
+
 ## 参考视频
 
 B站UP[11磅小老虎](https://space.bilibili.com/480670986?spm_id_from=333.337.0.0)
@@ -68,7 +70,7 @@ Vlinker FS USB(可以OTG连接安卓Forscan lite)、BT
 
 ### 8F24/35 Park结构
 
-
+![P档棘爪](/park.png)
 
 ### 变速箱油
 
